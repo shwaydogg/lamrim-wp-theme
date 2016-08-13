@@ -17,14 +17,14 @@ if( have_rows('list') ):
   while ( have_rows('list') ) : the_row();
 ?>
 
-  <h2><?php the_sub_field('name'); ?></h2>
+  <h2><?php the_sub_field('title'); ?></h2>
   <?php the_sub_field('top_content'); ?>
 
 <?php 
     if( have_rows('sub_list') ):
       while ( have_rows('sub_list') ) : the_row();
 ?>
-    <h3><?php the_sub_field('name'); ?></h3>
+    <h3><?php the_sub_field('title'); ?></h3>
     <?php the_sub_field('content'); ?>
 
 <?php
