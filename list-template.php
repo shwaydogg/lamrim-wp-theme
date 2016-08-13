@@ -14,25 +14,23 @@
 
 // check if the repeater field has rows of data
 if( have_rows('list') ):
-
-  // loop through the rows of data
-    while ( have_rows('list') ) : the_row();
-
-        // display a sub field value
+  while ( have_rows('list') ) : the_row();
 ?>
+
   <h2><?php the_sub_field('name'); ?></h2>
   <?php the_sub_field('top_content'); ?>
-<?php
 
-    endwhile;
-
-else :
-
-    // no rows found
-
-endif;
-
+<?php 
+    if( have_rows('sub_list') ):
+      while ( have_rows('sub_list') ) : the_row();
 ?>
+    <h3><?php the_sub_field('name'); ?></h3>
+    <?php the_sub_field('content'); ?>
 
-
+<?php
+      endwhile;
+    endif;
+  endwhile;
+endif;
+?>
 <?php endwhile; ?>
