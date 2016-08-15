@@ -6,10 +6,7 @@
 
 <?php while (have_posts()) : the_post(); ?>
   <?php get_template_part('templates/page', 'header'); ?>
-  HEY HO o
-
   <?php get_template_part('templates/content', 'page'); ?>
-
 <?php
 
 // check if the repeater field has rows of data
