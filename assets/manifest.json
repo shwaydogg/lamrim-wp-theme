@@ -6,6 +6,11 @@
       ],
       "main": true
     },
+    "list.js": {
+      "files": [
+        "scripts/list.js"
+      ]
+    },
     "main.css": {
       "files": [
         "styles/main.scss"
