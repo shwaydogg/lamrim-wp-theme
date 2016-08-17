@@ -11,7 +11,7 @@
 
     <ul id="nav-mobile" class="side-nav fixed" style="width: 240px;">
   <?php $i=0; if( have_rows('list') ): while ( have_rows('list') ) : the_row(); $i++;?>
-      <li class="no-padding active" name="aaa">
+      <li class="no-padding" id="nav-<?="$i"?>">
         <ul class="collapsible collapsible-accordion">
           <li>
             <?php 
@@ -22,7 +22,7 @@
               }
             ?>
             <a class="active" href="#list-item-<?="$i"?>" name="<?php echo $title ?>"><?php echo $title ?></a>
-            <div class="collapsible-body" style="display: block;">
+            <div class="collapsible-body">
               <ul>
                 <?php $j=0; if( have_rows('sub_list') ): while ( have_rows('sub_list') ) : the_row(); $j++;?>
                   <?php 
@@ -32,7 +32,7 @@
                       $title = get_sub_field('title'); 
                     }
                   ?>
-                  <li name="<?php echo $title ?>"><a href="#list-item-<?="$i-$j"?>"><?php echo $title ?></a></li>
+                  <li id="nav-<?="$i-$j"?>" class="list-sub-nav" name="<?php echo $title ?>"><a href="#list-item-<?="$i-$j"?>"><?php echo $title ?></a></li>
                 <?php endwhile; endif;?>
               </ul>
             </div>

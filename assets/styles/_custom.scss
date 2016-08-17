@@ -1,0 +1,48 @@
+h5 {
+  color:green;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a {
+  color: inherit;
+}
+
+a.copy-link {
+  position:relative;
+  i.link{
+    position: absolute;
+    bottom: 0;
+    left:-1em;
+    font-size: inherit;
+    vertical-align: middle;
+    display: none;
+  }
+}
+a.copy-link:hover i.link { display:block; }
+
+.list-item{
+  padding-top: 64px; //Ensure that upon clicking anchor link the item title is blow the fixed navbar;
+}
+
+@media #{$large-and-up} {
+    // styles for medium screens and larger
+  
+  body {
+    margin-left:240px;
+  }
+  nav {
+    top: 0;
+    margin-left:-240px;
+    padding-left:240px;
+  }
+
+  //.page-content {
+  //  margin-left:240px;
+  //}
+  //.navbar-fixed {
+  //  position: fixed;
+  //  left:0;
+  //}
+  //#nav-mobile {
+  //  top:64px;
+  //}
+}

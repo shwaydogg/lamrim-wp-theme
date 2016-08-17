@@ -8,6 +8,7 @@
     },
     "list.js": {
       "files": [
+        "scripts/inview.js",
         "scripts/list.js"
       ]
     },
