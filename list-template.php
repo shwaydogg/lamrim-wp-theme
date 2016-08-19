@@ -12,12 +12,12 @@
     <ul>
       <?php $i=0; if( have_rows('list') ): while ( have_rows('list') ) : the_row(); $i++;?>
         <li id="list-item-<?="$i"?>" class="list-item"  name="<?="$i"?>">
-          <h2><?php the_sub_field('title'); ?></h2>
+          <h2><a class="copy-link" href="#list-item-<?="$i"?>"><i class="link material-icons">link</i><?php the_sub_field('title'); ?></a></h2>
           <?php the_sub_field('top_content'); ?>
           <ul>
             <?php $j=0; if( have_rows('sub_list') ): while ( have_rows('sub_list') ) : the_row(); $j++;?>
               <li id="list-item-<?="$i-$j"?>" class="list-item sub" name="<?="$i-$j"?>">
-              <h3><?php the_sub_field('title'); ?></h3>
+              <h3><a class="copy-link" href="#list-item-<?="$i-$j"?>"><i class="link material-icons">link</i><?php the_sub_field('title'); ?></a></h3>
               <?php the_sub_field('content'); ?>
               </li>
             <?php endwhile; endif;?>
