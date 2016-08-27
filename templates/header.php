@@ -10,8 +10,14 @@
     </ul>
 
 
-  <?php if(is_page_template("list-template.php" )) { ?>
     <ul id="nav-mobile" class="side-nav fixed" style="width: 240px;">
+      <?php
+      if (has_nav_menu('primary_navigation')) :
+        wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
+      endif;
+      ?>
+  <?php if(is_page_template("list-template.php" )) { ?>
+    <hr/>
   <?php $i=0; if( have_rows('list') ): while ( have_rows('list') ) : the_row(); $i++;?>
       <li class="no-padding" id="nav-<?="$i"?>">
         <ul class="collapsible collapsible-accordion">
@@ -42,8 +48,8 @@
         </ul>
       </li>
   <?php endwhile; endif;?>
-    </ul>
   <?php }?>
+    </ul>
     <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
   </div>
 </nav>
