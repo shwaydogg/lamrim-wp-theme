@@ -76,3 +76,7 @@ $ = jQuery;// Undoes noConflict for easy jquery access.
   $(document).ready(UTIL.loadEvents);
 
 })(jQuery); // Fully reference jQuery after this point.
+
+$(document).ready(function(){
+  $(".button-collapse").sideNav(); //sets up Materialize mobile navbar
+});

@@ -26,14 +26,15 @@ a.copy-link:hover i.link { display:block; }
 @media #{$large-and-up} {
     // styles for medium screens and larger
   
-  body {
+  body.page-template-list-template {
     margin-left:240px;
+    nav {
+      top: 0;
+      margin-left:-240px;
+      padding-left:240px;
+    }
   }
-  nav {
-    top: 0;
-    margin-left:-240px;
-    padding-left:240px;
-  }
+
 
   //.page-content {
   //  margin-left:240px;

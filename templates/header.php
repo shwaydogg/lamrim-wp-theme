@@ -9,6 +9,8 @@
       ?>
     </ul>
 
+
+  <?php if(is_page_template("list-template.php" )) { ?>
     <ul id="nav-mobile" class="side-nav fixed" style="width: 240px;">
   <?php $i=0; if( have_rows('list') ): while ( have_rows('list') ) : the_row(); $i++;?>
       <li class="no-padding" id="nav-<?="$i"?>">
@@ -41,6 +43,7 @@
       </li>
   <?php endwhile; endif;?>
     </ul>
+  <?php }?>
     <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
   </div>
 </nav>
