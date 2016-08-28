@@ -23,6 +23,17 @@ a.copy-link:hover i.link { display:block; }
   padding-top: 64px; //Ensure that upon clicking anchor link the item title is blow the fixed navbar;
 }
 
+#main-mobile-nav {
+  background-color: #c45156; 
+  li a {
+    color: white;
+  }
+  .current-menu-item {
+    background-color: rgba(0,0,0,.05); 
+  } 
+}
+
+
 @media #{$large-and-up} {
     // styles for medium screens and larger
   

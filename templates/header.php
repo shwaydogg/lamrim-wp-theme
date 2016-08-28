@@ -1,5 +1,5 @@
 <div class="navbar-fixed">
-<nav class="light-blue lighten-1" role="navigation">
+<nav class="" role="navigation">
   <div class="nav-wrapper container"><a id="logo-container" href="<?= esc_url(home_url('/')); ?>" class="brand-logo"><?php bloginfo('name'); ?></a>
     <ul class="right hide-on-med-and-down">
       <?php
@@ -11,13 +11,15 @@
 
 
     <ul id="nav-mobile" class="side-nav fixed" style="width: 240px;">
-      <?php
-      if (has_nav_menu('primary_navigation')) :
-        wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
-      endif;
-      ?>
+      <div class="hide-on-large-only" id="main-mobile-nav">
+        <?php
+        if (has_nav_menu('primary_navigation')) :
+          wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
+        endif;
+        ?>
+        <hr/>
+      </div>
   <?php if(is_page_template("list-template.php" )) { ?>
-    <hr/>
   <?php $i=0; if( have_rows('list') ): while ( have_rows('list') ) : the_row(); $i++;?>
       <li class="no-padding" id="nav-<?="$i"?>">
         <ul class="collapsible collapsible-accordion">
