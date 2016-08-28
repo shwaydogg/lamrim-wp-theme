@@ -10,7 +10,8 @@
     </ul>
 
 
-    <ul id="nav-mobile" class="side-nav fixed" style="width: 240px;">
+    <ul id="nav-mobile" class="side-nav fixed <?php if(!is_page_template("list-template.php" )){ echo "hide-on-large-only"; } ?>" style="width: 240px;">
+  
       <div class="hide-on-large-only" id="main-mobile-nav">
         <?php
         if (has_nav_menu('primary_navigation')) :
