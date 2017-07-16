@@ -1,6 +1,18 @@
-console.log('IN LIST.JS u');
+console.log('IN LIST.JS');
 
 $(document).ready(function(){
+    console.log("smooth scrolling a \n\n\n\n\n wasdfdsayayyayayayay \n\n\n\n\n \n\n\n\n\n wasdfdsayayyayayayay \n\n\n\n\n \n\n\n\n\n wasdfdsayayyayayayay \n\n\n\n\n \n\n\n\n\n wasdfdsayayyayayayay \n\n\n\n\n");
+
+  //Setup Smooth Scrolling: 
+     //From https://stackoverflow.com/a/7717572/722738
+  $(document).on('click', 'a', function(event){
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+  });
+  
   $(".list-item").each(function(){
     $(this).on('inview', function(event, isInView) {
       var name = this.getAttribute('name');
@@ -22,5 +34,6 @@ $(document).ready(function(){
       $('.button-collapse').sideNav('hide');
     });
   }
-});
+  
 
+});
