@@ -22,6 +22,15 @@
       </div>
   <?php if(is_page_template("list-template.php" )) { ?>
   <?php $i=0; if( have_rows('list') ): while ( have_rows('list') ) : the_row(); $i++;?>
+    <?php if( get_sub_field("super_level") ){ ?>
+      <li class="no-padding super-nav-item" id="nav-<?="$i"?>">
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <a class="active" href="#list-item-<?="$i"?>-super" name="<?php the_sub_field('super_level'); ?>"><?php the_sub_field('super_level'); ?></a>
+          </li>
+        </ul>
+      </li>
+    <?php } ?>
       <li class="no-padding" id="nav-<?="$i"?>">
         <ul class="collapsible collapsible-accordion">
           <li>

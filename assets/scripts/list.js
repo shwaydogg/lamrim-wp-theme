@@ -1,7 +1,6 @@
 console.log('IN LIST.JS');
 
 $(document).ready(function(){
-    console.log("smooth scrolling a \n\n\n\n\n wasdfdsayayyayayayay \n\n\n\n\n \n\n\n\n\n wasdfdsayayyayayayay \n\n\n\n\n \n\n\n\n\n wasdfdsayayyayayayay \n\n\n\n\n \n\n\n\n\n wasdfdsayayyayayayay \n\n\n\n\n");
 
   //Setup Smooth Scrolling: 
      //From https://stackoverflow.com/a/7717572/722738

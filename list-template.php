@@ -11,6 +11,12 @@
   <div class="section flow-text">
     <ul>
       <?php $i=0; if( have_rows('list') ): while ( have_rows('list') ) : the_row(); $i++;?>
+        <?php if( get_sub_field("super_level") ){ ?>
+        <li id="list-item-<?="$i"?>-super" class="list-item super"  name="<?="$i"?>">
+          <h2><a class="copy-link" href="#list-item-<?="$i"?>-super"><i class="link material-icons">link</i><?php the_sub_field('super_level'); ?></a></h2>
+          <hr>
+        </li>        
+        <?php } ?>
         <li id="list-item-<?="$i"?>" class="list-item"  name="<?="$i"?>">
           <h2><a class="copy-link" href="#list-item-<?="$i"?>"><i class="link material-icons">link</i><?php the_sub_field('title'); ?></a></h2>
           <hr/>
