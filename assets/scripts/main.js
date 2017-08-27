@@ -10,7 +10,7 @@
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
 
-$ = jQuery;// Undoes noConflict for easy jquery access.
+$ = jQuery;/*global $*/ /*global jQuery*/ // Undoes noConflict for easy jquery access.
 (function($) {
 
   // Use this variable to set up the common and page specific functions. If you
