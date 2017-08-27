@@ -10,7 +10,7 @@
 
   <div class="section flow-text">
     <ul>
-      <?php $i=0; if( have_rows('list') ): while ( have_rows('list') ) : the_row(); $i++;?>
+      <?php if( have_rows('list') ): while ( have_rows('list') ) : the_row(); $i = get_sub_field("uid"); ?>
         <?php if( get_sub_field("super_level") ){ ?>
         <li id="list-item-<?="$i"?>-super" class="list-item super"  name="<?="$i"?>">
           <h2><a class="copy-link" href="#list-item-<?="$i"?>-super"><i class="link material-icons">link</i><?php the_sub_field('super_level'); ?></a></h2>
@@ -22,7 +22,7 @@
           <hr/>
           <?php the_sub_field('top_content'); ?>
           <ul>
-            <?php $j=0; if( have_rows('sub_list') ): while ( have_rows('sub_list') ) : the_row(); $j++;?>
+            <?php if( have_rows('sub_list') ): while ( have_rows('sub_list') ) : the_row(); $j = get_sub_field("uid");?>
               <li id="list-item-<?="$i-$j"?>" class="list-item sub" name="<?="$i-$j"?>">
               <h3><a class="copy-link" href="#list-item-<?="$i-$j"?>"><i class="link material-icons">link</i><?php the_sub_field('title'); ?></a></h3>
               <?php the_sub_field('content'); ?>

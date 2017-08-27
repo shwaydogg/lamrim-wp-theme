@@ -21,7 +21,7 @@
         <hr/>
       </div>
   <?php if(is_page_template("list-template.php" )) { ?>
-  <?php $i=0; if( have_rows('list') ): while ( have_rows('list') ) : the_row(); $i++;?>
+  <?php if( have_rows('list') ): while ( have_rows('list') ) : the_row(); $i = get_sub_field("uid"); ?>
     <?php if( get_sub_field("super_level") ){ ?>
       <li class="no-padding super-nav-item" id="nav-<?="$i"?>">
         <ul class="collapsible collapsible-accordion">
@@ -44,7 +44,7 @@
             <a class="active" href="#list-item-<?="$i"?>" name="<?php echo $title ?>"><?php echo $title ?></a>
             <div class="collapsible-body">
               <ul>
-                <?php $j=0; if( have_rows('sub_list') ): while ( have_rows('sub_list') ) : the_row(); $j++;?>
+                <?php if( have_rows('sub_list') ): while ( have_rows('sub_list') ) : the_row(); $j = get_sub_field("uid");?>
                   <?php 
                     if(get_sub_field('nav_title')){
                       $title = get_sub_field('nav_title'); 
