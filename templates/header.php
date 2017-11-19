@@ -1,8 +1,7 @@
 <div class="navbar-fixed">
 <nav class="" role="navigation">
   <div id="top-nav-wallpaper"></div>
-  <div id="side-nav-wallpaper"></div>
-  <div id="side-nav-wallpaper-back"></div>
+
 
   <div class="nav-wrapper container">
     
