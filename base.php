@@ -18,6 +18,7 @@ use Roots\Sage\Wrapper;
       do_action('get_header');
       get_template_part('templates/header');
     ?>
+    <div id="wallpaper"></div>
     <div class="wrap" role="document">
       <div class="content row">
         <main class="main flow-text">

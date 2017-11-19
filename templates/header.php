@@ -1,6 +1,12 @@
 <div class="navbar-fixed">
 <nav class="" role="navigation">
-  <div class="nav-wrapper container"><a id="logo-container" href="<?= esc_url(home_url('/')); ?>" class="brand-logo"><?php bloginfo('name'); ?></a>
+  <div id="top-nav-wallpaper"></div>
+  <div id="side-nav-wallpaper"></div>
+  <div class="nav-wrapper container">
+    
+    
+    <a id="logo-container" href="<?= esc_url(home_url('/')); ?>" class="brand-logo"><?php bloginfo('name'); ?></a>
+    
     <ul class="right hide-on-med-and-down">
       <?php
       if (has_nav_menu('primary_navigation')) :
@@ -11,7 +17,6 @@
 
 
     <ul id="nav-mobile" class="side-nav fixed <?php if(!is_page_template("list-template.php" )){ echo "hide-on-large-only"; } ?>" style="width: 240px;">
-  
       <div class="hide-on-large-only" id="main-mobile-nav">
         <?php
         if (has_nav_menu('primary_navigation')) :
@@ -41,7 +46,7 @@
                 $title = get_sub_field('title'); 
               }
             ?>
-            <a class="active" href="#list-item-<?="$i"?>" name="<?php echo $title ?>"><?php echo $title ?></a>
+            <a class="active top" href="#list-item-<?="$i"?>" name="<?php echo $title ?>"><?php echo $title ?></a>
             <div class="collapsible-body">
               <ul>
                 <?php if( have_rows('sub_list') ): while ( have_rows('sub_list') ) : the_row(); $j = get_sub_field("uid");?>

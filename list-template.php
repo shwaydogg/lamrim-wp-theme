@@ -12,10 +12,13 @@
     <ul>
       <?php if( have_rows('list') ): while ( have_rows('list') ) : the_row(); $i = get_sub_field("uid"); ?>
         <?php if( get_sub_field("super_level") ){ ?>
-        <img class="list-item-img" src="http://placebear.com/1800/800">
         <li id="list-item-<?="$i"?>-super" class="list-item super"  name="<?="$i"?>">
-          <h2><a class="copy-link" href="#list-item-<?="$i"?>-super"><i class="link material-icons">link</i><?php the_sub_field('super_level'); ?></a></h2>
-          <hr>
+          <img class="list-item-img" src="http://placebear.com/1800/800">
+          <h2>
+            <div class="container">
+              <a class="copy-link" href="#list-item-<?="$i"?>-super"><i class="link material-icons">link</i><?php the_sub_field('super_level'); ?></a>
+            </div>
+          </h2>
         </li>        
         <?php } ?>
         <li id="list-item-<?="$i"?>" class="list-item container"  name="<?="$i"?>">

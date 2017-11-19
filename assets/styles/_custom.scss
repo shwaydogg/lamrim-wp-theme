@@ -45,6 +45,10 @@ a.copy-link:hover i.link { display:block; }
 
 @media #{$large-and-up} {
     // styles for medium screens and larger
+    
+  .side-nav {
+    background:none;
+  }
   
   body.page-template-list-template {
     margin-left:240px;
@@ -52,7 +56,12 @@ a.copy-link:hover i.link { display:block; }
       top: 0;
       margin-left:-240px;
       padding-left:240px;
+      // background-image:url("https://lamrim2-shwaydogg.c9users.io/wp-content/uploads/2017/11/paper_texture.jpg");
+      // background-position:bottom;
+      // background-size: cover;
+      // background-opacity: .5;
     }
+    
   }
 
 
@@ -70,11 +79,12 @@ a.copy-link:hover i.link { display:block; }
 
 
 
-
-.super, .side-nav.fixed .super-nav-item a {
+.side-nav.fixed .super-nav-item a {
   background-color: #333;
   color:white;
   font-size:1.3em;
+  height:64px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
 }
 
 
@@ -82,11 +92,90 @@ a.copy-link:hover i.link { display:block; }
 .super {
   text-align:center;
   h2 {
+    background-color: rgba(26, 25, 25, 0.74);
+    color:rgba(255, 255, 255, .85);
+    text-align:left;
     width:100%;
+    position:absolute;
+    bottom:0;
+    padding:.6em 0;
   }
+}
+
+li.list-item.super {
+  position:relative;
+  padding-bottom: 12px;
 }
 
 
 .list-item-img {
   width: 100%;
+}
+
+#wallpaper {
+  background-image:url("https://lamrim2-shwaydogg.c9users.io/wp-content/uploads/2017/11/paper_texture.jpg");
+  background-size:cover;
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  opacity:.5;
+  z-index:-1;
+}
+
+#top-nav-wallpaper {
+  background-image:url("https://lamrim2-shwaydogg.c9users.io/wp-content/uploads/2017/11/paper_texture.jpg");
+  background-size:cover;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  opacity:.5;
+  z-index:-1;
+}
+
+#side-nav-wallpaper {
+  background-image:url("https://lamrim2-shwaydogg.c9users.io/wp-content/uploads/2017/11/paper_texture.jpg");
+  background-size:cover;
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  width:240px;
+  opacity:.5;
+  z-index:-1;
+}
+
+nav {
+  background-color:white;
+}
+
+.nav-wrapper {
+  #logo-container, .right.hide-on-med-and-down ul a{
+     color: black;   
+  }
+}
+
+
+.side-nav .collapsible-body, .side-nav.fixed .collapsible-body {
+  background:none;
+}
+
+
+//parent:
+.side-nav li.active {
+  background: none;
+  a.top {
+   background-color: rgba(0,0,0,.1);
+  }
+}
+//child:
+.side-nav .collapsible-body li.active, .side-nav.fixed .collapsible-body li.active {
+  background: none;
+  a {
+   background-color: rgba(128, 128, 128, .2);
+   color:black;
+  }
 }
