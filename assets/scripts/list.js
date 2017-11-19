@@ -5,8 +5,6 @@ $(document).ready(function(){
   //Setup Smooth Scrolling: 
      //From https://stackoverflow.com/a/7717572/722738
   $(document).on('click', 'a', function(event){
-    event.preventDefault();
-
     $('html, body').animate({
         scrollTop: $( $.attr(this, 'href') ).offset().top
     }, 500);
