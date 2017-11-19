@@ -1,8 +1,13 @@
 <div class="navbar-fixed">
 <nav class="" role="navigation">
   <div id="top-nav-wallpaper"></div>
-
-
+  
+  <?php if(is_page_template("list-template.php")){  ?> 
+    <div id="side-nav-wallpaper"></div>
+    <div id="side-nav-wallpaper-back"></div>
+  <?php } ?>
+   
+   
   <div class="nav-wrapper container">
     
     
