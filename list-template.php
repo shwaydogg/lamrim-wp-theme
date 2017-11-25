@@ -18,7 +18,7 @@
         <?php if( get_sub_field("super_level") ){ ?>
         <li id="list-item-<?="$i"?>-super" class="list-item super <?="$firstClass"?>  name="<?="$i"?>">
          <?php  $firstClass = ""; ?>
-          <img class="list-item-img" src="http://placebear.com/1800/800">
+          <img class="list-item-img" src="<?=get_sub_field("super_level_image")?>">
           <h2>
             <div class="container">
               <a class="copy-link" href="#list-item-<?="$i"?>-super"><i class="link material-icons">link</i><?php the_sub_field('super_level'); ?></a>
