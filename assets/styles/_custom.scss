@@ -41,6 +41,11 @@ a.copy-link:hover i.link { display:block; }
   } 
 }
 
+@media #{$medium-and-down} {
+  h2, h3 {
+    font-size: 1.6em;
+  }
+}
 
 @media #{$large-and-up} {
     // styles for medium screens and larger
@@ -200,4 +205,17 @@ nav {
     padding-top: 0;
     margin-top: 0;
   }
+}
+
+.super .endless-knot {
+  opacity: .85;
+  background-image: url(/wp-content/uploads/2017/11/noun_161978_cc-1.png);
+
+}
+.endless-knot {
+    background-image: url(/wp-content/uploads/2017/11/noun_161978_cc-e1511636411394.png);
+    background-size: cover;
+    width: 1em;
+    height: 1em;
+    display:block;
 }
