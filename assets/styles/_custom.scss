@@ -42,12 +42,14 @@ a.copy-link:hover i.link { display:block; }
 }
 
 
-
 @media #{$large-and-up} {
     // styles for medium screens and larger
     
   .side-nav {
     background:none;
+  }
+  #side-nav-wallpaper {
+    display: block;
   }
   
   body.page-template-list-template {
@@ -138,6 +140,7 @@ li.list-item.super {
 
 #side-nav-wallpaper-back,
 #side-nav-wallpaper {
+  display: none; //don't display on mobile
   background-size:cover;
   position:fixed;
   top:0;
