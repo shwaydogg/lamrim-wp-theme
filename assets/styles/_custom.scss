@@ -18,8 +18,8 @@ a.copy-link {
   position:relative;
   i.link{
     position: absolute;
-    bottom: 0;
-    left:-1em;
+    top: .2em;
+    left:-1.1em;
     font-size: inherit;
     vertical-align: middle;
     display: none;
@@ -218,4 +218,12 @@ nav {
     width: 1em;
     height: 1em;
     display:block;
+}
+
+#logo-container, h1, h2 {
+  font-family: 'Alfa Slab One', cursive;
+}
+
+h3, h4, h5, h6, #menu-menu-1 a, nav a {
+  font-family: 'Patua One', cursive;
 }
