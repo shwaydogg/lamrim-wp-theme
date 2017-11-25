@@ -49,7 +49,9 @@ a.copy-link:hover i.link { display:block; }
 
 @media #{$large-and-up} {
     // styles for medium screens and larger
-    
+  .side-nav.fixed {
+    top:64px;
+  }
   .side-nav {
     background:none;
   }
@@ -62,7 +64,8 @@ a.copy-link:hover i.link { display:block; }
     nav {
       top: 0;
       margin-left:-240px;
-      padding-left:240px;
+      //padding-left:240px;
+      
       // background-image:url("https://lamrim2-shwaydogg.c9users.io/wp-content/uploads/2017/11/paper_texture.jpg");
       // background-position:bottom;
       // background-size: cover;
