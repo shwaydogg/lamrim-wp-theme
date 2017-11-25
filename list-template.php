@@ -6,15 +6,18 @@
 
 
   
-<?php while (have_posts()) : the_post(); ?>
+<?php 
+    $firstClass = "first";
+    while (have_posts()) : the_post(); ?>
   <?php get_template_part('templates/page', 'header'); ?>
   <?php get_template_part('templates/content', 'page'); ?>
 
-  <div class="section flow-text">
-    <ul>
+  <div class="section flow-text top-list-div">
+    <ul class="top-list-ul">
       <?php if( have_rows('list') ): while ( have_rows('list') ) : the_row(); $i = get_sub_field("uid"); ?>
         <?php if( get_sub_field("super_level") ){ ?>
-        <li id="list-item-<?="$i"?>-super" class="list-item super"  name="<?="$i"?>">
+        <li id="list-item-<?="$i"?>-super" class="list-item super <?="$firstClass"?>  name="<?="$i"?>">
+         <?php  $firstClass = ""; ?>
           <img class="list-item-img" src="http://placebear.com/1800/800">
           <h2>
             <div class="container">
